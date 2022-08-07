@@ -1,0 +1,1076 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --main-font-color: black;
+    --second-font-color: #666666;
+    --main-bg-color: #0070d3;
+    --second-bg-color: #507210;
+    --white-color: white;
+}
+
+body img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+}
+
+.searchinput::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1;
+    font-size: 18px;
+    /* Firefox */
+}
+
+.searchinput:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+    font-size: 18px;
+}
+
+.searchinput::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
+    font-size: 18px;
+}
+
+
+/* loader css propery */
+
+html,
+body {
+    width: 100%;
+    background: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Loader {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.Loader button {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    display: grid;
+    place-items: center;
+    height: 84px;
+    padding: 0 42px;
+    border: 0;
+    border-radius: 9px;
+    font-family: Poppins;
+    font-size: 22px;
+    color: #ffffff;
+    cursor: wait;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(25px);
+    }
+
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+.Loader button>span {
+    position: relative;
+    z-index: 2;
+}
+
+.Loader button::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: #5b5466 repeating-linear-gradient(60deg, transparent, transparent 10px, #000000 10px, #313131 20px);
+    animation: loading .9s infinite linear;
+}
+
+/* spinng loader */
+.spinnerdiv {
+    padding: 10px 0px;
+    display: grid;
+    place-content: center;
+}
+
+.spinningLoader {
+    width: 30px;
+    height: 30px;
+    background-color: #f1f1f9;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 4px solid black;
+    border-bottom-color: transparent;
+    position: relative;
+    animation: spinner 1s linear infinite paused;
+    -webkit-animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(1turn);
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+    }
+}
+
+.logosec img {
+    width: 150px;
+}
+
+.searchbar {
+    position: relative;
+}
+
+.searchinput {
+    border: none;
+    height: 100%;
+    outline: none;
+    padding: 19px 26px;
+    color: black;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.outsearchbox {
+    position: absolute;
+    right: 0;
+    padding: 16px 17px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 100px;
+    margin-right: 1px;
+}
+
+.searchicon {}
+
+.BillBord {
+    padding-bottom: 80px;
+}
+
+.DeviceBlock {
+    border: 1px solid #a5aaaf;
+    cursor: pointer;
+    padding: 28px 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.DeviceBlock:hover {
+    border: 1px dashed black;
+}
+
+.bibordcontact:hover {
+    background-color: black;
+    color: white;
+    transition: .3s;
+}
+
+.DeviceBlock img {
+    width: fit-content;
+    height: auto;
+}
+
+.Header {
+    position: sticky;
+    transition: 1s;
+    z-index: 100;
+}
+
+.header_hidden {
+    background: white;
+    color: black;
+    right: -100%;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    transition: .5s;
+    z-index: 2;
+}
+
+
+.menu_apper {
+    right: 0;
+}
+
+.navs {
+    position: relative;
+    display: flex;
+}
+
+.navs a {
+    margin-right: 24px;
+    padding-bottom: 5px;
+    transition: .3s;
+}
+
+
+.navs a:hover {
+    border-bottom: 1.3px solid black;
+}
+
+.repair_now_button {
+    display: none;
+}
+
+.repair_now_button a {
+    background: #0ed5cc;
+    padding: 14px 33px;
+    border-radius: 28px;
+    font-weight: 600;
+}
+
+.repair_now_button2 {
+    margin-top: 45px;
+    display: block;
+}
+
+.hidden_navs .repair_now_button2 a {
+    font-size: 20px;
+}
+
+.repair_now_button a:hover {
+    border-bottom: none;
+}
+
+.hidden_navs {
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+}
+
+.hidden_navs a {
+    font-size: 25px;
+    margin-top: 13px;
+    font-weight: 600;
+}
+
+.footer_left iframe {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.footer_left_p {
+    width: fit-content;
+}
+
+.phone_block {
+    background-color: transparent;
+    border: 1px solid #b1b0b2;
+    border-radius: 0.5rem;
+    color: #b1b0b2 !important;
+    cursor: pointer;
+    padding: 0.9375rem 0.75rem;
+}
+
+.phone_block:hover {
+    background-color: #5b5b5b;
+    color: #fff !important;
+}
+
+.selectionblock {
+    display: block;
+    padding: 10px 18px;
+    border: 1px solid rgb(165, 170, 175);
+    border-radius: 8px;
+    margin-top: 14px;
+}
+
+.selectionblock:hover {
+    border: 1px solid black;
+}
+
+.selectionblock label {
+    cursor: pointer;
+    width: 100%;
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    color: rgb(110, 118, 125);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    line-height: inherit;
+    transition: color 0.2s ease-in-out 0s, font-size 0.2s ease-in-out 0s, padding 0.2s ease-in-out 0s;
+}
+
+.selectionblock select {
+    width: 100%;
+    font-size: 19px;
+    margin-left: -3px;
+    cursor: pointer;
+}
+
+.device {
+    margin-top: 30px;
+}
+
+.SubmitButton {
+    background: black;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.DesabledButton button {
+    padding: 10px 30px;
+    background-color: rgb(229, 229, 229);
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.SelectOption:hover {
+    background-color: rgb(230, 230, 235);
+}
+
+.problems {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.Prblem_up {
+    width: 100%;
+    align-items: center;
+}
+
+.Prblem_up img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.Problem {
+    color: rgb(0, 0, 0);
+    padding: 0px 1.5rem;
+    height: 6rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 135%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    justify-content: center;
+    border: 1px solid rgb(165, 170, 175);
+    background-color: rgb(255, 255, 255);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.problemprice {
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.validFielsValue {
+    background-color: red;
+    color: white;
+    padding: 5px 20px;
+    font-size: 15px;
+}
+
+.user_message {
+    margin-top: 25px;
+    height: 100px;
+    width: 100%;
+    padding: 10px 10px
+}
+
+.Varition {
+    width: 60rem;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 175px;
+}
+
+.variation {
+    background: #ff6433;
+    margin-top: 13px;
+    color: white;
+    padding: 22px 25px;
+    font-size: 22px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.var {
+    cursor: pointer;
+}
+
+.varitionPrice {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.veriations_ {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 16px;
+}
+
+.zipcodetopsec {}
+
+.ziptoptitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.whreal {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 28px;
+}
+
+.whrel_title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 10px;
+}
+
+.contatyoublocks {
+    display: flex;
+    margin-top: 5px;
+}
+
+.carconditioncheckboxstop {
+    display: block;
+    margin-top: 20px;
+}
+
+.carconditioncheckboxs {
+    margin: 0;
+    display: flex;
+    margin-top: 10px;
+}
+
+.carconditioncheckboxs input {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loader {
+    position: relative;
+    width: 165px;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.loader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    pointer-events: none;
+    animation: animate 5s linear infinite;
+}
+
+.loader h2 {
+    color: black;
+    font-size: 18px;
+}
+
+.loader span:nth-child(1) {
+    border-radius: 38% 62% 64% 36% / 43% 35% 65% 57%;
+}
+
+.loader span:nth-child(2) {
+    animation-direction: reverse;
+    border-radius: 41% 59% 40% 60% / 65% 66% 34% 35%;
+}
+
+.loader span:nth-child(3) {
+    animation-duration: 3s;
+    border-radius: 73% 27% 56% 44% / 57% 74% 26% 43%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h2 {
+    color: #fff;
+    font-weight: 500;
+    font-family: consolas;
+}
+
+.notnumber {}
+
+.notnumberp {
+    position: absolute;
+    left: 0;
+    width: 98%;
+    background: rgb(219, 27, 27);
+    padding: 3px 11px;
+    color: white;
+    font-size: 13px;
+}
+
+.months {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.monthname {
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.monthone {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    gap: 10px;
+}
+
+.monthoneday {
+    list-style: none;
+    padding: 15px 0px;
+    border: 1px solid rgb(213, 214, 218);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.monthoneday:hover {
+    border: 1px solid black;
+}
+
+.monthonedaydebaibled {
+    list-style: none;
+    padding: 15px 0px;
+    border: 1px solid rgb(213, 214, 218);
+    border-radius: 4px;
+    color: rgb(213, 214, 218);
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-top: 75px;
+    margin-bottom: 30px;
+}
+
+.select select {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #5c6664;
+    background-image: none;
+    border: 0 !important;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    flex: 1 1;
+    font-family: Open Sans, sans-serif;
+    font-size: 1em;
+    outline: 0;
+    padding: 0 1.5em;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+
+.select:hover::after {
+    color: #23b499;
+}
+
+.confirm_section {
+    margin-top: 221px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.user_message {
+    height: 150px;
+    margin-top: 25px;
+    padding: 18px 23px;
+    width: 100%;
+    border: 1px solid rgb(170 171 173);
+    border-radius: 5px;
+}
+
+.ServicesLoadings {
+    margin: 0 auto;
+    width: 80rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 31px;
+    margin-bottom: 86px;
+}
+
+.learnmoremain {
+    padding-top: 97px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80rem;
+    margin-top: 73px;
+    padding-bottom: 120px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.learnmaintop {}
+
+.learnmaintop h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.learnmaintop p {
+    font-size: 20px;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.learnbottom {
+    margin-top: 96px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 27px;
+}
+
+.learnbottomblock {}
+
+.learnbottomblock img {
+    height: 328px;
+    margin: 22px 0px;
+}
+
+.lrnblocktitle {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.lrnblockdes {
+    margin-top: 6px;
+    font-size: 18px;
+}
+
+.SearchResults {}
+
+.SearchResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #a5aaaf;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.SearchResult:hover {
+    box-shadow: 0 0 5px 1px rgb(0 0 0 / 26%);
+}
+
+.deviceImg {}
+
+.deviceImg img {
+    width: 90px;
+}
+
+.devicename {
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+.devicename p {
+    font-size: 17px;
+}
+
+.gobacktofrontpage {
+    display: none;
+}
+
+.gobackhomelink a {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    padding: 15px 34px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.nosearchicon {
+    color: white;
+    width: fit-content;
+    font-size: 30px;
+}
+
+.phoneshover {
+    top: 25px;
+    position: absolute;
+    left: 0;
+    display: none;
+    z-index: 20;
+}
+
+.PhonesHover {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+}
+
+.PhoneHoverBlock {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.PhoneHoverBlock:hover>.hovername {
+    background-color: black;
+    color: white;
+}
+
+.PhoneHoverBlock:hover>.phonehverimage img {
+    transform: scale(1.1);
+}
+
+.phonehverimage {
+    width: 65px;
+}
+
+.phonehverimage img {
+    transition: .5s;
+}
+
+.hovername {
+    background-color: #f8f8f8;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+    margin-top: 17px;
+}
+
+.AboutBlockBottom img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 50px;
+}
+
+.WhyChooseUs {
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #e43e79 0%, #fc6b39 100%);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 0px;
+    --widgets-spacing: 20px;
+    position: relative;
+}
+
+.WhyChooseUsInner {
+    background-image: url(https://show.moxcreative.com/repairkit/wp-content/uploads/sites/23/2021/11/repairman-fixing-smartphones.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    --widgets-spacing: 20px;
+}
+
+.WhyChooseUsInner_ {
+    position: relative;
+    transform: translateY(0%);
+    padding: 135px 0px;
+}
+
+.sectionWelcomeTtile {
+    border: 2px dashed black;
+    width: fit-content;
+    padding: 6px 19px;
+    margin-bottom: 19px;
+}
+
+.sectionWelcomeTtileWhite {
+    border: 2px dashed white;
+}
+
+.review_sec_bigimage img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 35px;
+}
+
+.reviews {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.Review {
+    flex: none;
+    width: 100%;
+}
+
+.faqblock {
+    cursor: pointer;
+    background-color: #eeeeee;
+    margin-bottom: 19px;
+    padding: 28px 28px 28px 28px;
+    border-radius: 8px;
+}
+
+.Reviews_section {
+    position: relative;
+}
+
+.faqblock summary {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.review_top img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+}
+
+.revbuttons {
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+.revbuttonleft {
+    background: black;
+    padding: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.AutoSearchResults {
+    margin-top: -10px;
+}
+
+.AutoSearchResults ul {
+    background-color: white;
+}
+
+.AutoSearchResults ul li {
+    border-top: 1px solid #cecece;
+    padding: 14px 21px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.PhonesRepairPhone {
+    padding: 0px 30px;
+    min-height: 70px;
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    ;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+.phonerepairimage img {
+    position: relative;
+    top: 21px;
+}
+
+.PhonesRepairPhone:hover {
+    background: #fff;
+    border: 1px solid #a5aaaf;
+    box-shadow: 0 0 5px 1px rgb(0 0 0 / 26%)
+}
+
+.phonebackbutton {
+    background-color: black;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .DeviceBlock {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 17px 21px;
+        margin-top: 14px;
+    }
+
+    .DeviceBlock img {
+        width: 53px;
+    }
+
+    .billbordmain {
+        margin-top: 26px;
+    }
+
+    .footer_right {
+        margin-top: 50px;
+    }
+
+    .contactblocks {
+        display: block;
+    }
+
+    .phone_block {
+        margin-bottom: 10px;
+    }
+
+    .footer_left iframe {
+        width: 100%;
+        height: 60vw;
+    }
+
+    .problems {
+        grid-template-columns: 1fr;
+    }
+
+    .months {
+        grid-template-columns: 1fr;
+    }
+
+    .logosec img {
+        width: 138px;
+    }
+
+    .billwelcometext {
+        font-size: 31px;
+        margin-top: 17px;
+        margin-bottom: 40px;
+        line-height: 38px;
+    }
+
+    .AboutBlockBottom img {
+        height: 408px;
+    }
+
+    .outsearchbox,
+    .searchinput {
+        padding: 13px 13px;
+    }
+
+    .outsearchbox {
+        margin-right: 3px;
+    }
+
+    .review_sec_bigimage img {
+        height: 386px;
+    }
+
+    .revbuttonleft {
+        padding: 10px;
+    }
+
+    .revbuttons {
+        top: 40px;
+    }
+
+    .bibordcontact {
+        font-size: 16px;
+        padding: 16px 16px;
+    }
+}
