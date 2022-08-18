@@ -7,7 +7,7 @@ import { BackendLink } from './BackendLink'
 import Link from 'next/link'
 
 const Header = () => {
-    const [SearchQuery, setSearchQuery] = useState("")
+    const [SearchQuery, setSearchQuery] = useState('')
     const [AutoSearch, setAutoSearch] = useState([])
     const [AutoSearchDevices, setAutoSearchDevices] = useState()
 
