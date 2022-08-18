@@ -31,6 +31,7 @@ const Userdata = () => {
             })
                 .then((res) => {
                     setServices(res.data.catalog);
+                    console.log(res.data);
                 })
         } catch (error) {
         }

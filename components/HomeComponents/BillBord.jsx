@@ -16,7 +16,7 @@ const BillBord = () => {
                         Select Your Device To Start Repair
                     </p>
                     <p className='text-[20px] font-medium'>
-                        This is a Website for a phone repair company
+                        This is a Website for a imaginary phone repair company
                         which uses square catalog API to get all devices and services,
                         user API to create new users and booking API to create booking for customers.
                     </p>

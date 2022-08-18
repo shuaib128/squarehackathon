@@ -8,6 +8,7 @@ import { BackendLink } from '../../utils/BackendLink'
 
 const Fields = (props) => {
     const [IsValidNumber, setIsValidNumber] = useState(true)
+    const [IsValidEmail, setIsValidEmail] = useState(true)
 
     // Get previous page information
     const router = useRouter();
@@ -97,6 +98,8 @@ const Fields = (props) => {
                     type="email"
                     placeholder="Email"
                     setValue={props.setEmail}
+                    IsValidEmail={IsValidEmail}
+                    setIsValidEmail={setIsValidEmail}
                 />
                 <Field
                     type="tel"
